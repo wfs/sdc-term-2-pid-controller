@@ -41,7 +41,7 @@ double init_Kd = 0.000255;
 1. Computationally inexpensive.
 
 * ![PID controller driving simulation GIF](./pid_controller_5_sec.gif)
-* [PID controller driving simulation video](https://www.youtube.com/watch?v=bmZ-OaNCpcw)
+* [PID controller driving simulation video](https://youtu.be/1eAglBH_FWI)
 
 ---
 
