@@ -1,3 +1,50 @@
+# Reflection
+## PID Terms
+tau-p (aka Kp in the code base) is the steering equations Proportional term which 
+describes how hard you want to steer back to the centre 
+of the road (x-axis).
+
+tau-i (aka Ki in the code base) is the steering equations Integral term  which 
+describes how much the wheels are out of alignment.
+
+tau-d (aka Kd in the code base) is the steering equations Derivative term which
+describes how much smoothing is to be applied to the steering turn-back correction
+in order to place the car in the centre of the road (x-axis).
+
+## PID Cross Track Errors (CTE)
+d_error is the Differential error which stores how much this error changed since 
+our last CTE recording.
+
+p_error is the Proportional error which stores how far we are off the centre 
+of the road, which is where we want to track to.
+
+i_error is the Integral error which is the cumulative sum of all of our CTEs.
+
+## Steering Equation
+The steering value is calculated with this PID equation from Term2.Lesson16.Video11.
+```
+steer_value = (-pid.Kp * cte) - (pid.Kd * pid.d_error) - (pid.Ki * pid.i_error);
+```
+
+## Manually Tuned Hyper Parameters
+Through trial-and-error, I arrived at these values that successfully 
+resulted in the car driving the simulated track. 
+```
+double init_Kp = 0.3;
+double init_Ki = 0.000228;
+double init_Kd = 0.000255;
+```
+
+## Result
+1. Jerky steering but car remains on the track.
+1. Quick to implement.
+1. Computationally inexpensive.
+
+* ![PID controller driving simulation GIF](./pid_controller_5_sec.gif)
+* [PID controller driving simulation video](https://www.youtube.com/watch?v=bmZ-OaNCpcw)
+
+---
+
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 

@@ -1,0 +1,3 @@
+/home/andrew/dev/term2/sdc-term2-p4-pid-controller/build/CMakeFiles/edit_cache.dir
+/home/andrew/dev/term2/sdc-term2-p4-pid-controller/build/CMakeFiles/rebuild_cache.dir
+/home/andrew/dev/term2/sdc-term2-p4-pid-controller/build/CMakeFiles/pid.dir
